@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Expense Tracker</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+
+<h1>Expense Dashboard</h1>
+
+<button id="themeBtn">
+Dark Mode
+</button>
+
+</header>
+
+<section class="cards">
+
+<div class="card income">
+<h3>Income</h3>
+<p id="income">₹0</p>
+</div>
+
+<div class="card expense">
+<h3>Expense</h3>
+<p id="expense">₹0</p>
+</div>
+
+<div class="card balance">
+<h3>Balance</h3>
+<p id="balance">₹0</p>
+</div>
+
+</section>
+
+<section class="formBox">
+
+<input id="desc" placeholder="Description">
+
+<input id="amount" type="number"
+placeholder="Amount">
+
+<select id="category">
+
+<option>Food</option>
+
+<option>Travel</option>
+
+<option>Shopping</option>
+
+<option>Bills</option>
+
+<option>Salary</option>
+
+<option>Other</option>
+
+</select>
+
+<select id="type">
+
+<option value="income">
+Income
+</option>
+
+<option value="expense">
+Expense
+</option>
+
+</select>
+
+<button onclick="addTransaction()">
+
+Add Transaction
+
+</button>
+
+</section>
+
+<section>
+
+<input id="search"
+placeholder="Search">
+
+</section>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Description</th>
+
+<th>Category</th>
+
+<th>Amount</th>
+
+<th>Type</th>
+
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody id="tbody">
+
+</tbody>
+
+</table>
+
+<div class="chartBox">
+
+<canvas id="myChart"></canvas>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
