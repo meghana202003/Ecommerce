@@ -1063,5 +1063,13 @@ body.dark footer{
         height:200px;
 
     }
+     .productCard img,
+
+    .saleCard img{
+
+        height:200px;
+
+    }
+    
 
 }
